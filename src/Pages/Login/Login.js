@@ -22,7 +22,7 @@ const Login = () => {
 
 
     if (user) {
-        navigate(from, { replace: true });
+        navigate('/home');
     }
 
 
@@ -101,7 +101,7 @@ const Login = () => {
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline"
+                        className="btn btn-outline btn-secondary"
                     >Login with Google</button>
                 </div>
             </div>
