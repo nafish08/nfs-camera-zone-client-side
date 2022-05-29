@@ -4,7 +4,7 @@ import Part from './Part';
 const Parts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://damp-island-00679.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
