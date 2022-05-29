@@ -14,6 +14,7 @@ import MyProfile from './Pages/MyProfile/MyProfile';
 import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Header from './Pages/Shared/Header';
+import NotFound from './Pages/Shared/NotFound';
 
 function App() {
   const [user] = useAuthState(auth)
@@ -41,6 +42,7 @@ function App() {
         <Route path='/myprofile' element={<RequireAuth><MyProfile></MyProfile></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
