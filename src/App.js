@@ -1,15 +1,22 @@
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import auth from './firebase.init';
+import AddReview from './Pages/AddReview/AddReview';
 import Blogs from './Pages/Blogs/Blogs';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
 import SignUp from './Pages/Login/SignUp';
+import MyOrders from './Pages/MyOrders/MyOrders';
+import MyProfile from './Pages/MyProfile/MyProfile';
 import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Header from './Pages/Shared/Header';
 
 function App() {
+  const [user] = useAuthState(auth)
   return (
     <div className="mx-auto bg-slate-200">
       <Header></Header>
@@ -22,6 +29,16 @@ function App() {
             <Purchase></Purchase>
           </RequireAuth>
         }></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
+          </RequireAuth>
+        }>
+        </Route>
+
+        <Route path='/myorders' element={<RequireAuth><MyOrders></MyOrders></RequireAuth>}></Route>
+        <Route path='/addreview' element={<RequireAuth><AddReview></AddReview></RequireAuth>}></Route>
+        <Route path='/myprofile' element={<RequireAuth><MyProfile></MyProfile></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>
