@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_apiKey,
-    authDomain: process.env.REACT_APP_authDomain,
-    projectId: process.env.REACT_APP_projectId,
-    storageBucket: process.env.REACT_APP_storageBucket,
-    messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    appId: process.env.REACT_APP_appId,
+    apiKey: "AIzaSyDa9edRvzKHbLdzO1jayaNEYB2cj0VHO58",
+    authDomain: "nfs-camera-zone.firebaseapp.com",
+    projectId: "nfs-camera-zone",
+    storageBucket: "nfs-camera-zone.appspot.com",
+    messagingSenderId: "916570955565",
+    appId: "1:916570955565:web:28294bc457fdabcad33da4"
 };
 
 // Initialize Firebase
