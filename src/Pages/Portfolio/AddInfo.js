@@ -16,7 +16,7 @@ const AddInfo = () => {
             projects: event.target.name.value,
             image: event.target.name.value,
         }
-        fetch('http://localhost:5000/', {
+        fetch('https://damp-island-00679.herokuapp.com/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

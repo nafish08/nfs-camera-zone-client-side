@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import usePart from '../../hooks/usePart';
 import Part from './Part';
 
 const Parts = () => {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = usePart([]);
     useEffect(() => {
         fetch('https://damp-island-00679.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
-    }, [])
+    }, [setProducts])
     return (
         <div>
             <div className='text-center'>

@@ -20,7 +20,7 @@ const Part = ({ product }) => {
                 <small>Available Quantity: {quantity}</small>
                 <small>Price: {price}BDT (per unit)</small>
                 <div className="card-actions">
-                    <Link to={'/purchase'}><button onClick={() => navigateToPurchsase(_id)} className="btn btn-primary text-white uppercase">Place Order</button></Link>
+                    <Link to={'/dashboard'}><button onClick={() => navigateToPurchsase(_id)} className="btn btn-primary text-white uppercase">Place Order</button></Link>
                 </div>
             </div>
         </div>
