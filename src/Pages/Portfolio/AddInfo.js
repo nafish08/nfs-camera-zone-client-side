@@ -1,12 +1,37 @@
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddInfo = () => {
     const [user] = useAuthState(auth);
 
     const handleSubmit = event => {
         event.preventDefault();
+        const porfolio = {
+            name: user.displayName,
+            email: user.email,
+            education: event.target.education.value,
+            skills: event.target.skills.value,
+            projects: event.target.name.value,
+            image: event.target.name.value,
+        }
+        fetch('http://localhost:5000/', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(porfolio)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    toast(`Porfolio created successfully`);
+                }
+                else {
+                    toast(`Portfolio already exists in database`);
+                }
+            })
     }
     return (
         <div className='flex justify-center items-center h-screen'>
