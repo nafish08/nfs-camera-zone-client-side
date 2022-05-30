@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
@@ -11,11 +10,11 @@ const Portfolio = () => {
                 <tbody>
                     <tr>
                         <th>Name</th>
-                        <td>{user.displayName}</td>
+                        <td>{user?.displayName}</td>
                     </tr>
                     <tr>
                         <th>Email</th>
-                        <td>{user.email}</td>
+                        <td>{user?.email}</td>
                     </tr>
                     <tr>
                         <th>Education</th>
@@ -31,6 +30,10 @@ const Portfolio = () => {
                     </tr>
                 </tbody>
             </table>
+            <div className='block text-center'>
+                <button className="btn btn-secondary text-white uppercase">Update Info</button>
+            </div>
+
         </div>
     );
 };

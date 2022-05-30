@@ -30,14 +30,14 @@ const SignUp = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (user) {
-        navigate('/home');
+    if (user || gUser) {
+        console.log(user || gUser);
     }
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        console.log('update done');
+        navigate('/home');
     }
     return (
         <div className='flex h-screen justify-center items-center my-32'>

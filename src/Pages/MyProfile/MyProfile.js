@@ -8,7 +8,7 @@ const MyProfile = () => {
         <div>
             <h2 className='text-3xl text-center font-bold my-12 uppercase'>Add or Update Your Info</h2>
             <form >
-                <div class="form-control w-full max-w-xs mx-auto">
+                <div className="form-control w-full max-w-xs mx-auto">
                     <input type="text" name='name' value={user.displayName} className="input w-full max-w-xs" />
                     <input type="email" name='email' value={user.email} className="input w-full max-w-xs mt-4" />
                     <input type="text" name='edu' placeholder='Education Qualification' className="input w-full max-w-xs mt-4" />

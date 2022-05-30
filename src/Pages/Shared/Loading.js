@@ -4,7 +4,7 @@ import './Loading.css'
 const Loading = () => {
     return (
         <div className='flex justify-center'>
-            <div class="loader">
+            <div className="loader">
             </div>
         </div>
     );
