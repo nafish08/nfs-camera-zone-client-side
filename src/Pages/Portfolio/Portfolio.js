@@ -1,4 +1,5 @@
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Portfolio = () => {
@@ -31,7 +32,7 @@ const Portfolio = () => {
                 </tbody>
             </table>
             <div className='block text-center'>
-                <button className="btn btn-secondary text-white uppercase">Update Info</button>
+                <Link to={'/addinfo'}><button className="btn btn-secondary text-white uppercase mt-3">Update Info</button></Link>
             </div>
 
         </div>
