@@ -38,13 +38,6 @@ const Blogs = () => {
                 <h1 className='text-2xl'>5. You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h1>
                 <img src="https://i.ibb.co/dMnfyDr/Screenshot-2022-05-29-220802.png" alt="" /><br /><br />
             </div>
-            <div className='lg:mx-32'>
-                <h1 className='text-2xl'>6. What is a unit test? Why should write unit tests?</h1>
-                <p>Before any code is deployed, it is subjected to unit testing to ensure that it fulfills
-                    quality criteria. This promotes a dependable engineering environment that prioritizes quality.
-                    Unit testing saves time and money across the product development life cycle, and it helps developers
-                    design better, more efficient code.</p><br /><br />
-            </div>
         </div>
     );
 };
