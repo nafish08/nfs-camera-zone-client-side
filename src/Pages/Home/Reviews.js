@@ -4,7 +4,7 @@ import Review from './Review';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://damp-island-00679.herokuapp.com/review')
+        fetch('https://nfs-camera-zone-server-side.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

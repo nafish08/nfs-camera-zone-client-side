@@ -5,7 +5,7 @@ import Part from './Part';
 const Parts = () => {
     const [products, setProducts] = usePart([]);
     useEffect(() => {
-        fetch('https://damp-island-00679.herokuapp.com/product')
+        fetch('https://nfs-camera-zone-server-side.vercel.app/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [setProducts])
